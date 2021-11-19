@@ -1,4 +1,4 @@
-# Best              O(n2)
+# Best              O(n)
 # Worst             O(n2)
 # Average           O(n2)
 # Space Complexity  O(1)
