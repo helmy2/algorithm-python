@@ -1,3 +1,8 @@
+# Best              O(n*log n)
+# Worst             O(n*log n)
+# Average           O(n*log n)
+# Space Complexity  O(n)
+
 def merge_sort(arr):
     if len(arr) <= 1:
         return

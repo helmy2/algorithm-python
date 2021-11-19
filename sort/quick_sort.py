@@ -1,29 +1,44 @@
+# Best              O(n*log n)
+# Worst             O(n2)
+# Average           O(n*log n)
+# Space Complexity  O(log n)
+
+
 from swap import swap
 
 
+# function to find the partition position
 def partition(arr, low, high):
+
+    # choose the rightmost element as pivot
     pivot = arr[high]
-    i = low - 1
+
+    # pointer for greater element
+    i = low
 
     for j in range(low, high):
         if arr[j] <= pivot:
-            i = i + 1
+            # if element smaller than pivot is found
+            # swapping element at i with element at j
             swap(arr, i, j)
+            i = i + 1
 
-    swap(arr, i + 1, high)
+    # swap the pivot element with the greater element specified by i
+    swap(arr, i, high)
 
-    return i + 1
+    # return the position from where partition is done
+    return i
 
 
 def quick_sort(arr, low, high):
     if low > high:
         return
 
-    loc = partition(arr, low, high)
+    pi = partition(arr, low, high)
 
-    quick_sort(arr, low, loc - 1)
+    quick_sort(arr, low, pi - 1)
 
-    quick_sort(arr, loc + 1, high)
+    quick_sort(arr, pi + 1, high)
 
 
 if __name__ == '__main__':

@@ -1,9 +1,14 @@
+# Best              O(n2)
+# Worst             O(n2)
+# Average           O(n2)
+# Space Complexity  O(1)
+
 from swap import *
 
 
 def bubble_sort(arr):
     for i in range(len(arr)):
-        for j in range(0, len(arr) - i - 1):
+        for j in range(len(arr) - i - 1):
             if arr[j] > arr[j + 1]:
                 swap(arr, j, j + 1)
 

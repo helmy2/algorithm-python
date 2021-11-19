@@ -1,3 +1,8 @@
+# Best              O(n2)
+# Worst             O(n2)
+# Average           O(n2)
+# Space Complexity  O(1)
+
 from swap import *
 
 
