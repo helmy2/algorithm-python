@@ -1,8 +1,4 @@
-# Binary Search in python
-
-
 def binary_search(array, number, low, high):
-    # Repeat until the pointers low and high meet each other
     while low <= high:
 
         mid = low + (high - low) // 2
